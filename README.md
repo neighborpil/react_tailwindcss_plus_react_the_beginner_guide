@@ -3,3 +3,4 @@
 ### Docs
 - deployed version of example: https://tailwindcss-shoes-self.vercel.app/
 - tailwind official document: https://tailwindcss.com/docs
+- tailwind css tester: https://play.tailwindcss.com/
