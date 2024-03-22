@@ -15,3 +15,22 @@
 - xl: 1280px
 - zxl: 1536px
 
+```
+<div class="text-4xl">
+  <div class="">base</div>
+  <div class="invisible sm:visible md:text-red-500 lg:text-8xl">sm: 640px</div>
+  <div class="invisible md:visible">md: 768px</div>
+  <div class="invisible lg:visible">lg: 1004px</div>
+  <div class="invisible xl:visible">xl: 1280px</div>
+  <div class="invisible 2xl:visible">2xl: 1536px</div>
+</div>
+
+<div class="flex flex-col text-4xl sm:flex-row">
+  <div class="">base</div>
+  <div class="">sm: 640px</div>
+  <div class="">md: 768px</div>
+  <div class="">lg: 1004px</div>
+  <div class="">xl: 1280px</div>
+  <div class="">2xl: 1536px</div>
+</div>
+```
