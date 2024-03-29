@@ -34,3 +34,20 @@
   <div class="">2xl: 1536px</div>
 </div>
 ```
+
+### state 
+- always last element will be applied
+```
+<button class="m-4 bg-indigo-500 text-white">Click me!</button>
+<button class="ml-4 mr-4 mb-4 mt-4 bg-indigo-500 text-white">Click me!</button>
+<button class="m-4 px-4 bg-indigo-500 text-white">Click me!</button>
+<button class="m-4 rounded-md bg-indigo-500 text-white">Click me!</button>
+<button class="focus:ring-2 ring-green-500 bg-red-500 m-4 hover:bg-red-600 active:bg-red-400 rounded-md text-white sm:bg-indigo-500 sm:hover:bg-indigo-600 sm:active:bg-indigo-400">Click me!</button>
+
+<!-- Last element will be applied in the class -->
+<ul>
+  <li class="first:bg-green-400 last:bg-blue-400 odd:bg-purple-400 even:bg-yellow-300">Element 1</li>
+  <li class="first:bg-green-400 last:bg-blue-400 odd:bg-purple-400 even:bg-yellow-300">Element 2</li>
+  <li class="first:bg-green-400 last:bg-blue-400 odd:bg-purple-400 even:bg-yellow-300">Element 3</li>
+</ul>
+```
