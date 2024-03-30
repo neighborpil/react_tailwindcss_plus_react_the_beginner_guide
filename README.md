@@ -262,3 +262,37 @@ export default {
 @tailwind components;
 @tailwind utilities;
 ```
+   + 그리고 추가로 초기 프로젝트 설정에서 생긴 App.css파일은 필요없으니 삭제
+   + 그리고 App.jsx파일안에서 App.css관련된 내용은 모두 삭제
+   + App.jsx
+```
+function App() {
+  return (
+    "HI!"
+  )
+}
+
+export default App
+```
+6. 기타사항
+   + main.jsx를 index.jsx로 바꿔준다. 그리고 index.html에서 링크를 index.jsx로 바꾼다
+   + vite.config.js파일에서 port설정을 3000으로 바꿔준다
+```
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+  }
+})
+```
+   + index.jsx에서 StrictMode제거하고 불필요한 import 제거
+   + assets에 이미지 추가
+7. prettier, svg등  추가
+```
+% npm install -d prettier prettier-plugin-tailwindcss vite-plugin-svgr
+```
+   + prettier setting: settings에서 prettier로 검색한 후에 Automatic Prettier configuration과 run on save에 체크
