@@ -229,20 +229,22 @@ export default {
 
 ## Tailwind Shoe project setting
 1. tailwindcss 가이드 프로젝트 페이지에서 내용을 확인한다
-   + https://tailwindcss.com/docs/guides/vite
+    + https://tailwindcss.com/docs/guides/vite
 2. terminal에서 아래의 코드를 실행하여 프로젝트를 만든다
 ```
 % npm create vite@latest tailwind-shoes -- --template react
 % cd tailwind-shoes
 % npm install
 ```
+
 3. tailwindcss를 설치하고 초기화한다
 ```
 % npm install -D tailwindcss postcss autoprefixer
 % npx tailwindcss init -p
 ```
+
 4. webstorm으로 열고 tailwind.cofnig.js파일에서 초기 내용을 가이드페이지처럼 설정해준다
-   + tailwind.config.js
+    + tailwind.config.js
 ```
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -256,15 +258,16 @@ export default {
   plugins: [],
 }
 ```
+
 5. 글로벌 index.css에 모든것을 지우고 tailwindcss directives를 추가한다
 ```
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
-   + 그리고 추가로 초기 프로젝트 설정에서 생긴 App.css파일은 필요없으니 삭제
-   + 그리고 App.jsx파일안에서 App.css관련된 내용은 모두 삭제
-   + App.jsx
+    + 그리고 추가로 초기 프로젝트 설정에서 생긴 App.css파일은 필요없으니 삭제
+    + 그리고 App.jsx파일안에서 App.css관련된 내용은 모두 삭제
+    + App.jsx
 ```
 function App() {
   return (
@@ -290,11 +293,11 @@ export default defineConfig({
   }
 })
 ```
-   + index.jsx에서 StrictMode제거하고 불필요한 import 제거
-   + assets에 이미지 추가
+    + index.jsx에서 StrictMode제거하고 불필요한 import 제거
+    + assets에 이미지 추가
      
 7. prettier, svg등  추가
 ```
 % npm install -d prettier prettier-plugin-tailwindcss vite-plugin-svgr
 ```
-   + prettier setting: settings에서 prettier로 검색한 후에 Automatic Prettier configuration과 run on save에 체크
+    + prettier setting: settings에서 prettier로 검색한 후에 Automatic Prettier configuration과 run on save에 체크
