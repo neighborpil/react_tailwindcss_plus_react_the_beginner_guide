@@ -137,3 +137,61 @@ export default {
 <!-- px-13 is custom spacing -->
 <button class="bg-[#00d1ad] rounded-[300px] px-13 py-2">Button</button>
 ```
+
+### Directives
+- css 파일에 커스텀 클래스를 작성하여 전체 파일에서 사용 할 수 있다
+- css
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold;
+  }
+  h2 {
+    @apply text-2xl font-semibold;
+    background-color: red;
+  }
+  p {
+    @apply text-gray-400;
+  }
+}
+
+@layer components {
+  .btn-danger {
+    @apply rounded-lg bg-red-500 px-4 py-2 text-white hover:bg-red-600;
+  }
+}
+
+@layer directives {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
+```
+- html
+```
+<h1>Welcome to Our Webstie</h1>
+
+<h2 >Tailwind is pretty dope</h2>
+<p>Here: a lot of reasons why tailwind is dope</p>
+
+<h2 >React is pretty dope</h2>
+<p>Here: a lot of reasons why React is dope</p>
+
+<h2 >NodeJS is pretty dope</h2>
+<p>Here: a lot of reasons why NodeJS is dope</p>
+
+<button class="rounded-lg bg-red-500 px-4 py-2 text-white hover:bg-red-600">Delete</button>
+<button class="btn-danger">Danger</button>
+
+<div class="bg-blue-200 h-44 flex items-center justify-center">
+  <p>HI</p>
+</div>
+
+<div class="bg-blue-200 h-44 flex-center">
+  <p>HI</p>
+</div>
+```
