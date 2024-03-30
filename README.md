@@ -274,9 +274,10 @@ function App() {
 
 export default App
 ```
+
 6. 기타사항
-   + main.jsx를 index.jsx로 바꿔준다. 그리고 index.html에서 링크를 index.jsx로 바꾼다
-   + vite.config.js파일에서 port설정을 3000으로 바꿔준다
+    + main.jsx를 index.jsx로 바꿔준다. 그리고 index.html에서 링크를 index.jsx로 바꾼다
+    + vite.config.js파일에서 port설정을 3000으로 바꿔준다
 ```
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
@@ -291,6 +292,7 @@ export default defineConfig({
 ```
    + index.jsx에서 StrictMode제거하고 불필요한 import 제거
    + assets에 이미지 추가
+     
 7. prettier, svg등  추가
 ```
 % npm install -d prettier prettier-plugin-tailwindcss vite-plugin-svgr
