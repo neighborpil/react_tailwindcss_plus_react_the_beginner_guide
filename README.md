@@ -300,4 +300,5 @@ export default defineConfig({
 ```
 % npm install -d prettier prettier-plugin-tailwindcss vite-plugin-svgr
 ```
+
     + prettier setting: settings에서 prettier로 검색한 후에 Automatic Prettier configuration과 run on save에 체크
