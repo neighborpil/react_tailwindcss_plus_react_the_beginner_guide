@@ -195,3 +195,34 @@ export default {
   <p>HI</p>
 </div>
 ```
+
+### dark mode
+- config에서 darkMode를 정의해줘야 한다. 이후에 html에서 dark:를 붙이고 쓰면 된다
+- darkMode를 class로 설정해 두고 아래의 코드를 통해 다크모드를 전환 할 수 있다. 그러면 최상단의 html코드에 dark라는 클래스가 달린다
+```
+onclick="document.documentElement.classList.toggle('dark')"
+```
+- config
+```
+/** @type {import('tailwindcss').Config} */
+export default {
+  darkMode: "class",
+  theme: {
+    extend: {
+    },
+  },
+  plugins: [],
+}
+```
+- html
+```
+<div class="flex h-screen items-center justify-center">
+  <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-indigo-950 dark:shadow-sm">
+    <h2 class="text-2xl font-semibold text-gray-800 dark:text-white">Card Title</h2>
+    <p class="mt-2 text-gray-600 dark:text-gray-400">This is the main content of the card.</p>
+    <p class="mt-2 text-gray-400">Subtext or additional information goes here.</p>
+
+    <button onclick="document.documentElement.classList.toggle('dark')" class="mt-4 rounded bg-indigo-500 px-4 py-2 font-semibold text-white hover:bg-indigo-600">Button</button>
+  </div>
+</div>
+```
