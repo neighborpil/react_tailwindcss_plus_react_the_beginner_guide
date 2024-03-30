@@ -300,9 +300,9 @@ export default defineConfig({
     + assets에 이미지 추가
      
 7. prettier, svg등  추가
-
+    + prettier setting: settings에서 prettier로 검색한 후에 Automatic Prettier configuration과 run on save에 체크
 ```
 % npm install -d prettier prettier-plugin-tailwindcss vite-plugin-svgr
 ```
 
-    + prettier setting: settings에서 prettier로 검색한 후에 Automatic Prettier configuration과 run on save에 체크
+
