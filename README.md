@@ -4,7 +4,7 @@
 - deployed version of example: https://tailwindcss-shoes-self.vercel.app/
 - tailwind official document: https://tailwindcss.com/docs
 - tailwind css tester: https://play.tailwindcss.com/
-
+- 강좌 깃 프로젝트: https://github.com/codiku/tailwindcss-shoes
 #### grid
 - grid grid-cols-3: flex한 상태로 한줄에 3개씩만 표시
 
@@ -225,4 +225,40 @@ export default {
     <button onclick="document.documentElement.classList.toggle('dark')" class="mt-4 rounded bg-indigo-500 px-4 py-2 font-semibold text-white hover:bg-indigo-600">Button</button>
   </div>
 </div>
+```
+
+## Tailwind Shoe project setting
+1. tailwindcss 가이드 프로젝트 페이지에서 내용을 확인한다
+   + https://tailwindcss.com/docs/guides/vite
+2. terminal에서 아래의 코드를 실행하여 프로젝트를 만든다
+```
+% npm create vite@latest tailwind-shoes -- --template react
+% cd tailwind-shoes
+% npm install
+```
+3. tailwindcss를 설치하고 초기화한다
+```
+% npm install -D tailwindcss postcss autoprefixer
+% npx tailwindcss init -p
+```
+4. webstorm으로 열고 tailwind.cofnig.js파일에서 초기 내용을 가이드페이지처럼 설정해준다
+   + tailwind.config.js
+```
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+5. 글로벌 index.css에 모든것을 지우고 tailwindcss directives를 추가한다
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ```
