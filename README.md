@@ -260,14 +260,17 @@ export default {
 ```
 
 5. 글로벌 index.css에 모든것을 지우고 tailwindcss directives를 추가한다
+
 ```
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
+
     + 그리고 추가로 초기 프로젝트 설정에서 생긴 App.css파일은 필요없으니 삭제
     + 그리고 App.jsx파일안에서 App.css관련된 내용은 모두 삭제
     + App.jsx
+    
 ```
 function App() {
   return (
@@ -297,6 +300,7 @@ export default defineConfig({
     + assets에 이미지 추가
      
 7. prettier, svg등  추가
+
 ```
 % npm install -d prettier prettier-plugin-tailwindcss vite-plugin-svgr
 ```
