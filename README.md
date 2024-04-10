@@ -5,6 +5,7 @@
 - tailwind official document: https://tailwindcss.com/docs
 - tailwind css tester: https://play.tailwindcss.com/
 - 강좌 깃 프로젝트: https://github.com/codiku/tailwindcss-shoes
+- FontSource: https://fontsource.org/
 #### grid
 - grid grid-cols-3: flex한 상태로 한줄에 3개씩만 표시
 
@@ -306,3 +307,22 @@ export default defineConfig({
 ```
 
 
+### Font Installation
+1. go to the fontsource page and search the font what I want.
+    + https://fontsource.org/
+2. copy the installation code.
+3. install font using npm
+    + npm install @fontsource-variable/nunito-sans
+4. go to the index.jsx and import the font
+```
+// Supports weights 200-900
+import '@fontsource-variable/nunito-sans';
+```
+6. go to the index.css and add style
+```
+@layer base {
+  body {
+    font-family: 'Nunito Sans Variable', sans-serif;
+  }
+}
+```
