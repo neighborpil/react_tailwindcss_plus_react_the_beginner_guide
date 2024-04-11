@@ -326,3 +326,7 @@ import '@fontsource-variable/nunito-sans';
   }
 }
 ```
+
+### ※클래스명을 동적으로 생성하면 안된다
+- `bg-[#${color}`]와 같은 코드는 동작하지 않는다
+- 대신에 클래스명을 통째로 넘기면 동작한다
