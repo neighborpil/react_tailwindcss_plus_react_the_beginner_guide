@@ -333,4 +333,12 @@ import '@fontsource-variable/nunito-sans';
 
 
 ### Tailwind merge
-- css 우선순위에 의하여 className을 Child에게 전달하는 방법
+- css 우선순위에 의하여 className을 Child에게 전달할때 충돌이 일어날 수 있다. 패키지로 해결
+```
+% npm i tw-merge
+```
+- className을 twMerge로 감싸줘서 맨 마지막에 있는 css가 먹히도록 한다.
+```
+className={twMerge(`w-24 appearance-none border border-gray-300 bg-white p-4 ${className}`)}
+```
+
